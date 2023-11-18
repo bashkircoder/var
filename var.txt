@@ -3,4 +3,8 @@ number count
 string-count
 string check
 string numbers
-value of numbers
+value of numbers 1
+value of numbers 2
+value of numbers 3
+value of numbers 4
+value of numbers 5
