@@ -1,0 +1,6 @@
+number_list
+number_count
+string_count
+string_check
+string_numbers
+value_of_numbers
