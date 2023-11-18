@@ -3,4 +3,13 @@ number_count
 string_count
 string_check
 string_numbers
-value_of_numbers
+value_of_numbers_1
+value_of_numbers_2
+value_of_numbers_3
+value_of_numbers_4
+value_of_numbers_5
+value_of_numbers1
+value_of_numbers2
+value_of_numbers3
+value_of_numbers4
+value_of_numbers5

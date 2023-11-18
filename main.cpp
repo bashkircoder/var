@@ -10,16 +10,17 @@ using namespace std;
 
 
 int main() {
-    int count = 0;
-    int count_copy = 0;
+    int count;
+    int count_total;
     string input_path = "D:\\Study\\1611Class\\var.txt";
     string output_path = "D:\\Study\\1611Class\\AgreementVars.txt";
     vector<string> var;
-    var = GetVarFromText(input_path);
+    var = GetVarFromText(input_path, &count_total);
 
-    var = VarValidation(var);
+    var = VarValidation(var, &count);
     CopyVarToFile(var, output_path);
-    cout << "The best" << endl;
+    cout << "Wrong variables: " << count << endl;
+    cout << "Total variables: " << count_total << endl;
 
     return 0;
 }

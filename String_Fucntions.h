@@ -6,7 +6,8 @@
 
 using namespace std;
 
-vector<string> GetVarFromText(string path) {
+vector<string> GetVarFromText(string path, int* count_total) {
+    *count_total = 0;
     vector<string> var;
     ifstream file;
     file.open(path);
@@ -14,22 +15,28 @@ vector<string> GetVarFromText(string path) {
         string str;
         getline(file, str);
         var.push_back(str);
+        *count_total+=1;
     }
     file.close();
     return var;
 }
 
-vector<string> VarValidation(vector<string> var){
-    string str;
+vector<string> VarValidation(vector<string> var, int* count){
+    string str; bool status = true;
+    *count = 0;
     for (int i = 0; i < var.size(); ++i) {
         str = var[i];
         for (int j = 0; j < str.size(); ++j) {
             if (str[j] == '-' || str[j] == ' '){
+                status = false;
                 str[j] = '_';
+
             }
         }
+        if (status == false) *count+=1;
         var[i] = str;
         str.clear();
+        status = true;
     }
     return var;
 }
