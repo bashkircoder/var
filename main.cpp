@@ -19,7 +19,7 @@ int main() {
 
     var = VarValidation(var);
     CopyVarToFile(var, output_path);
-
+    cout << "The best" << endl;
 
     return 0;
 }
